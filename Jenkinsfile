@@ -10,6 +10,11 @@ pipeline {
                 }
             }
         }
+        stage('Check Workspace') {
+            steps {
+                bat 'dir /s /b'
+            }
+        }
         stage('Archive') {
             steps {
             archiveArtifacts artifacts: 'src/Hello.jar', fingerprint: true
