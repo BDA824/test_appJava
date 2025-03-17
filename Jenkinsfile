@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'javac src/Hello.java'
-                    sh 'cd src ; jar cf Hello.jar Hello.class'
+                    bat 'javac src/Hello.java'
+                    bat 'cd src ; jar cf Hello.jar Hello.class'
                 }
             }
         }
