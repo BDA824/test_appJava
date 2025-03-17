@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'javac src/Hello.java'
-                sh 'cd src && jar cf Hello.jar sample/Hello.class'
+                script {
+                    sh 'javac src/Hello.java'
+                    sh 'cd src && jar cf Hello.jar sample/Hello.class'
+                }
             }
         }
         stage('Archive') {
