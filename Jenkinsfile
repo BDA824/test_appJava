@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     sh 'javac src/Hello.java'
-                    sh 'cd src && jar cf Hello.jar sample/Hello.class'
+                    sh 'cd src && jar cf Hello.jar src/Hello.class'
                 }
             }
         }
