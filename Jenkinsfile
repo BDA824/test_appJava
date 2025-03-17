@@ -11,8 +11,10 @@ pipeline {
             }
         }
         stage('Check Workspace') {
-            steps {
-                bat 'dir /s /b'
+            script{
+                steps {
+                    bat 'dir /s /b'
+                }      
             }
         }
         stage('Archive') {
